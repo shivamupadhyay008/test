@@ -6,7 +6,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useState } from "react";
 import Button from "../common/Button";
-import axios from "axios";
 import { axiosInstance } from "@/utils/axiosInstance";
 
 const schema = yup.object().shape({
@@ -51,7 +50,6 @@ export default function JobForm({ edit, isOpen, setRefresh, onClose }) {
   const {
     control,
     handleSubmit,
-    watch,
     register,
     formState: { errors },
   } = useForm({
